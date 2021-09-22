@@ -24,59 +24,11 @@ pipeline {
 
     }
     stages {
-        stage('Update-cobol') {
+        stage('delete-package') {
             steps {
-                sh 'gulp --tasks'
-                echo 'Updating cobol source code in Endevor..'
-                sh 'gulp update-cobol'
-            }
-        }
-        stage('Build-cobol') {
-            steps {
-                echo 'Building cobol..'
-                sh 'gulp build-cobol'
-            }
-        }
-        stage('Build-lnk') {
-            steps {
-                echo 'Building module to CICS..'
-                sh 'gulp build-lnk'
-            }
-        }
-        stage('Copy-load') {
-            steps {
-                echo 'Copying module to CICS env..'
-                sh 'gulp copy-load'
-            }
-        }
-        stage('Copy-dbrm') {
-            steps {
-                echo 'Copying dbrm to db2 env for db2 bind..'
-                sh 'gulp copy-dbrm'
-            }
-        }
-        stage('CICS-refresh') {
-            steps {
-                echo 'New copying module in CICS..'
-                sh 'gulp cics-refresh'
-            }
-        }
-        stage('Bind-n-grant') {
-            steps {
-                echo 'Binding db2 plan and granting..'
-                sh 'gulp bind-n-grant'
-            }
-        }
-        stage('Test-tran') {
-            steps {
-                echo 'Testing transaction..'
-      //          sh 'gulp test-tran'
-            }
-        }
-         stage('Verify-data') {
-            steps {
-                echo 'verifying data for the test result..'
-                sh 'gulp verify-data'
+               sh 'gulp --tasks'
+                echo 'Deleting the previous package in Endevor..'
+               sh 'gulp delete-package'
             }
         }
         stage('create-package') {
