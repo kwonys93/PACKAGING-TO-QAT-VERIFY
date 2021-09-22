@@ -14,6 +14,13 @@ gulp.task("task", function (cb) {
   });
 });
 
+gulp.task("delete-package", function (callback) {
+  //  var command = "zowe endevor generate element " + config.testElement + " --type LNK --override-signout --maxrc 0 --stage-number 1";
+  var command =
+    "zowe endevor delete package " + config.packageName + " -i ENDEVOR";
+  simpleCommand(command, "command-archive/delete-package", callback);
+});
+
 gulp.task("create-package", function (callback) {
   //   var command = "zowe endevor generate element " + config.testElement + " --type COBOL --override-signout --maxrc 0 --stage-number 1";
 
