@@ -1,0 +1,6 @@
+SET STOPRC 16 .                                                             
+MOVE ELEMENT 'FAPCOB06'                                                     
+  FROM ENVIRONMENT 'SMPLTEST' SYSTEM 'FINANCE' SUBSYSTEM 'ACCTPAY'          
+    TYPE 'COBOL' STAGE T                                                    
+  OPTIONS CCID 'YSK5' COMMENTS "YSK5"                                       
+ .                                                                          

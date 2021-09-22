@@ -1,0 +1,6 @@
+SET STOPRC 16 .                                                             
+MOVE ELEMENT 'MARBLE10'                                                     
+  FROM ENVIRONMENT 'SMPLTEST' SYSTEM 'FINANCE' SUBSYSTEM 'ACCTREC'          
+    TYPE 'COBCDB2' STAGE T                                                    
+  OPTIONS CCID 'YSK10' COMMENTS "YSK10"                                       
+ .                                                                                      

@@ -1,0 +1,95 @@
+//
+// APIMSGS - url: http://mvsde42.lvn.broadcom.net:10080/endevor/reports/1631975618-564202039-APIMSGS
+//
+
+1CA Endevor SCM Version 18.0.12           Copyright (C) 1986-2018 CA. All Rights Reserved.         18SEP21 23:33:37     PAGE     1   
+                                       E N D E V O R   A P I   E X E C U T I O N   R E P O R T                                       
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ 23:33:37  API0101I  BEGINNING OF API ACTION PROCESSING                                                                              
+           API0100I  API SCL REQUEST                                                                                                 
+           API0100I     MESSAGE DDNAME: APIMSGS                                                                                      
+           API0100I     SCL TYPE: P                                                                                                  
+           API0100I  SCL COMMANDS:                                                                                                   
+           API0100I  CAST PACKAGE "YSKPKG6" OPTIONS BACKOUT IS ENABLED .                                                             
+           API0100I                                                                                                                  
+ 23:33:37  API0102I  DISPATCHING API ACTION                                                                                          
+ 23:33:38  API0079E  ERRORS WERE DETECTED. REVIEW THE C1MSGS1 EXECUTION REPORT FOR DETAILS                                           
+ 23:33:38  API0000E  ERROR(S) DETECTED, PROCESSING TERMINATED                                                                        
+           API0100I                                                                                                                  
+ 23:33:38  API0000I  PROCESSING COMPLETE - RC=00012 REASON=00000                                                                     
+
+//
+// C1MSGS1 - url: http://mvsde42.lvn.broadcom.net:10080/endevor/reports/1631975618-774324469-C1MSGS1
+//
+
+1CA Endevor SCM Version 18.0.12           Copyright (C) 1986-2018 CA. All Rights Reserved.         18SEP21 23:33:37     PAGE     1   
+                                       Batch Package Facility Control Statement Summary Report                                       
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ 23:33:37  ENBP900I  Control statement parsing is beginning                                                                          
+                                                                                                                                     
+ 23:33:37  ENBP923I  Statement number 1                                                                                              
+           CAST PACKAGE "YSKPKG6" OPTIONS BACKOUT IS ENABLED .                                                                       
+ 23:33:37  ENBP901I  Control statement parsing has completed with no errors                                                          
+1CA Endevor SCM Version 18.0.12           Copyright (C) 1986-2018 CA. All Rights Reserved.         18SEP21 23:33:37     PAGE     2   
+                                            Batch Package Facility Action Execution Report                                           
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ 23:33:37  ENBP011I  Statement 1 Package 1                                                                                           
+           CAST PACKAGE 'YSKPKG6'                                                                                                    
+             OPTIONS BACKOUT IS ENABLED                                                                                              
+             .                                                                                                                       
+                                                                                                                                     
+ 23:33:37  ENBP012I  Beginning execution of the CAST action                                                                          
+ 23:33:37  ENMP090I  KWOYO01 initiating cast of 'YSKPKG6'                                                                            
+ 23:33:37  ENMP300I  Package cast: execution window is from 18SEP21 00:00 thru 31DEC79 00:00 - status is IN-EDIT                     
+ 23:33:37  C1Y0015I  STARTING PARSE OF REQUEST CARDS                                                                                 
+                                                                                                                                     
+  STATEMENT #1                                                                                                                       
+  SET STOPRC 16 .                                                                                                                    
+                                                                                                                                     
+  STATEMENT #2                                                                                                                       
+                                                                                                                                     
+  MOVE ELEMENT 'FAPCOB06'                                                                                                            
+                                                                                                                                     
+    FROM ENVIRONMENT 'SMPLTEST' SYSTEM 'FINANCE' SUBSYSTEM 'ACCTPAY'                                                                 
+                                                                                                                                     
+      TYPE 'COBOL' STAGE T                                                                                                           
+                                                                                                                                     
+    OPTIONS CCID 'YSK5' COMMENTS "YSK5"                                                                                              
+                                                                                                                                     
+   .                                                                                                                                 
+                                                                                                                                     
+  STATEMENT #3                                                                                                                       
+                                                                                                                                     
+  EOF STATEMENT GENERATED                                                                                                            
+ 23:33:37  C1Y0016I  REQUEST CARDS SUCCESSFULLY PARSED                                                                               
+                                                                                                                                     
+ 23:33:37  PKMR400I  BEGINNING ACTION VALIDATION AND SEARCH FOR APPLICABLE APPROVER GROUPS                                           
+ 23:33:37  C1G0063I                                                                                                                  
+ 23:33:37  C1G0064I  PROCESSING STATEMENT #2                                                                                         
+ 23:33:38  C1G0063I                                                                                                                  
+ 23:33:38  PKMR509E  STMT #2 ELEMENT NOT FOUND AT SMPLTEST/FINANCE/ACCTPAY/COBOL/TEST                                                
+ 23:33:38  C1G0000I     ELEMENT FAPCOB06                                                                                             
+ 23:33:38  PKMR428I  REYLAND IS AN APPLICABLE APPROVER GROUP FOR THIS PACKAGE                                                        
+ 23:33:38  PKMR401I  ACTION VALIDATION COMPLETED **WITH** ERRORS                                                                     
+ 23:33:38  PKMR408E  CAST ERRORS DETECTED. REVIEW THE CAST REPORT FOR DETAILS                                                        
+ 23:33:38  ENMP092I  Error message(s) issued during cast of 'YSKPKG6'                                                                
+ 23:33:38  ENBP023I  The CAST action has completed for package ID 'YSKPKG6'.  Return Code is 12                                      
+1CA Endevor SCM Version 18.0.12           Copyright (C) 1986-2018 CA. All Rights Reserved.         18SEP21 23:33:38     PAGE     3   
+                                             Batch Package Facility Action Summary Report                                            
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+                       Action       Statement  Package  Package           Return    Execution                                        
+                       Name          Number    Number   Name               Code    Return Code                                       
+                       -----------  ---------  -------  ----------------  -------  -----------                                       
+                       CAST               1         1   YSKPKG6              12                                                      
+                                                                                                                                     
+ 23:33:38  ENBP010I  Processing is complete.  Highest return code is 12                                                              

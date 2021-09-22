@@ -1,0 +1,6 @@
+SET STOPRC 16 .                                                             
+MOVE ELEMENT 'MARBLE10'                                                     
+  FROM ENVIRONMENT 'SMPLTEST' SYSTEM 'MARBLES' SUBSYSTEM 'MARBLES'          
+    TYPE 'COBOL' STAGE T                                                    
+  OPTIONS CCID 'YSK5' COMMENTS "YSK5"                                       
+ .                                                                          
