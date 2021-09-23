@@ -55,7 +55,13 @@ pipeline {
                 echo 'executing package-moving element from TEST to QAT..'
                 sh 'gulp execute-package'
             }
-        }        
+        }  
+        stage('Copy-load') {
+            steps {
+                echo 'Copying module to CICS env..'
+                sh 'gulp copy-load'
+            }
+        }      
         stage('Copy-dbrm') {
             steps {
                 echo 'Copying dbrm to db2 env for db2 bind..'
