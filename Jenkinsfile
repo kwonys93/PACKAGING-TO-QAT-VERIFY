@@ -82,7 +82,7 @@ pipeline {
         }
         stage('Test-tran') {
             steps {
-                echo 'Testing transaction..'
+                echo 'Testing transaction for QAT..'
                 sh 'gulp test-tran'
             }
         }
