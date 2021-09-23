@@ -55,6 +55,36 @@ pipeline {
                 echo 'executing package-moving element from TEST to QAT..'
                 sh 'gulp execute-package'
             }
+        }        
+        stage('Copy-dbrm') {
+            steps {
+                echo 'Copying dbrm to db2 env for db2 bind..'
+                sh 'gulp copy-dbrm'
+            }
+        }
+        stage('CICS-refresh') {
+            steps {
+                echo 'New copying module in CICS..'
+                sh 'gulp cics-refresh'
+            }
+        }
+        stage('Bind-n-grant') {
+            steps {
+                echo 'Binding db2 plan and granting..'
+                sh 'gulp bind-n-grant'
+            }
+        }
+        stage('Test-tran') {
+            steps {
+                echo 'Testing transaction..'
+      //          sh 'gulp test-tran'
+            }
+        }
+         stage('Verify-data') {
+            steps {
+                echo 'verifying data for the test result..'
+                sh 'gulp verify-data'
+            }
         }
         /*
         stage('Test-validation') {
